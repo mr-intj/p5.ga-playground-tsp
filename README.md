@@ -5,7 +5,7 @@ Genetic Algorithm Playground - TSP
 I decided to experiment with [p5.js](https://p5js.org/),
 and this was my first quick project.
 
-![Image](../blob/master/screenshot.png?raw=true)
+![Screenshot Image](../master/images/screenshot.png?raw=true)
 
 ## :star: Features
 
