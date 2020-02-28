@@ -1,0 +1,137 @@
+:root {
+  --app-font-family: 'Roboto', 'Roboto Full', 'Noto', 'SF', 'Arial', 'Helvetica', sans-serif;
+  --app-font-size: large;
+  --app-font-style: normal;
+  --app-font-weight: normal;
+
+  --button-face: hsl(203, 31%, 71%);
+	--button-border-dark:hsl(203, 31%, calc(71% * 0.90));
+	--button-border-light: hsl(203, 31%, calc(71% * 1.10));
+	--button-text: black;
+	--button-radius: 2em;
+  --button-font-weight: bold;
+  --button-font-size: x-large;
+}
+body {
+  background-color: var(--button-face);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: [canvas-start panel-start] 100% [canvas-end panel-end];
+  grid-template-columns: [canvas-start] auto [canvas-end panel-start] min-content [panel-end];
+  font: var(--app-font-style) var(--app-font-weight) var(--app-font-size) var(--app-font-family);
+  padding: 12px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+button {
+	background-color: var(--button-face);
+	color: var(--button-text);
+  border-top: 2px solid var(--button-border-light);
+  border-right: 2px solid var(--button-border-dark);
+  border-bottom: 2px solid var(--button-border-dark);
+  border-left: 2px solid var(--button-border-light);
+	border-radius: var(--button-radius);
+  font: var(--app-font-style) var(--button-font-weight) var(--button-font-size) var(--app-font-family);
+  flex: 1 100%;
+  height: 2.65em;
+  width: 175px;
+}
+:focus {
+  outline: transparent;
+}
+button::-moz-focus-inner {
+  border: none;
+}
+label {
+	color: #333333;
+  font-size: x-large;
+  font-weight: bold;
+}
+input[type='range'] {
+  width: 100%;
+}
+/* .status {
+  grid-area: canvas;
+  color: #40404080;
+  font-weight: bold;
+  margin: 8px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+} */
+.status {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.start-button {
+	background-color: hsl(120, 75%, 72%);
+  border-top: 2px solid hsl(120, 70%, calc(72% * 1.05));
+  border-right: 2px solid hsl(120, 60%, calc(72% * 0.96));
+  border-bottom: 2px solid hsl(120, 60%, calc(72% * 0.96));
+  border-left: 2px solid hsl(120, 70%, calc(72% * 1.05));
+}
+.pause-button {
+	background-color: hsl(60, 75%, 72%);
+  border-top: 2px solid hsl(60, 70%, calc(72% * 1.05));
+  border-right: 2px solid hsl(60, 60%, calc(72% * 0.96));
+  border-bottom: 2px solid hsl(60, 60%, calc(72% * 0.96));
+  border-left: 2px solid hsl(60, 70%, calc(72% * 1.05));
+}
+.groupbox {
+  border-top: 2px solid var(--button-border-dark);
+  border-right: 2px solid var(--button-border-light);
+  border-bottom: 2px solid var(--button-border-light);
+  border-left: 2px solid var(--button-border-dark);
+  border-radius: 12px;
+  background-color: var(--button-face);
+  margin: 12px 0 12px 0;
+  padding: .7em 1em;
+}
+.current-value {
+  font-weight: normal;
+}
+#canvas-wrapper {
+  grid-area: canvas;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+/* #status-1 {
+  align-self: start;
+  justify-self: start;
+	z-index: 100;
+}
+#status-2 {
+  align-self: start;
+  justify-self: end;
+  z-index: 101;
+}
+#status-3 {
+  align-self: end;
+  justify-self: start;
+	z-index: 102;
+}
+#status-4 {
+  align-self: end;
+  justify-self: end;
+  z-index: 103;
+} */
+#panel {
+  grid-area: panel;
+  margin: 0 0 0 15px;
+}
+#buttons-group {
+  display: flex;
+}
+#toggle-run {
+  margin-right: 6px;
+}
+#reset {
+	background-color: hsl(0, 75%, 72%);
+  border-top: 2px solid hsl(0, 70%, calc(72% * 1.05));
+  border-right: 2px solid hsl(0, 60%, calc(72% * 0.96));
+  border-bottom: 2px solid hsl(0, 60%, calc(72% * 0.96));
+  border-left: 2px solid hsl(0, 70%, calc(72% * 1.05));
+  margin-left: 6px;
+}

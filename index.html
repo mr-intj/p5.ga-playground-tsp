@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Genetic Algorithm applied to Traveling Salesman Problem</title>
+    <script src="graph_view.js"></script>
+    <script src="individual.js"></script>
+    <script src="main.js"></script>
+    <script src="map_view.js"></script>
+    <script src="population.js"></script>
+    <script src="problem.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id=canvas-wrapper></div>
+    <!-- <h1 id=status-1 class=status>Generation: <span id=status-1-generation></span></h1>
+    <h1 id=status-2 class=status>Path Length: <span id=status-2-length></span></h1>
+    <h1 id=status-3 class=status>Elapsed Time: <span id=status-3-time></span></h1>
+    <h1 id=status-4 class=status>GPS: <span id=status-4-gps></span></h1> -->
+    <div id=panel>
+      <div id=buttons-group>
+        <button id=toggle-run class=start-button>Start</button>
+        <button id=reset>Reset</button>
+      </div>
+      <div class=groupbox>
+        <label>Population Size: <span id=population-size class=current-value>...</span>
+          <input id=population-sldr type=range>
+        </label>
+      </div>
+      <div class=groupbox>
+        <label>Number of Cities: <span id=num-cities class=current-value>...</span>
+          <input id=cities-sldr type=range>
+        </label>
+      </div>
+      <div class=groupbox>
+        <label>Mutation Rate: <span id=mutation-rate class=current-value>...</span>
+          <input id=mutation-sldr type=range>
+        </label>
+      </div>
+      <h3 id=status-1 class=status>Generation: <span id=status-1-generation class=current-value></span></h3>
+      <h3 id=status-2 class=status>Path Length: <span id=status-2-length class=current-value></span></h3>
+      <h3 id=status-3 class=status>Elapsed Time: <span id=status-3-time class=current-value></span></h3>
+      <h3 id=status-4 class=status>Generations/Second: <span id=status-4-gps class=current-value></span></h3>
+    </div>
+  </body>
+</html>
